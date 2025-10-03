@@ -106,6 +106,7 @@ app.all('*', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-});
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`OpenAI to NVIDIA NIM Proxy running on port ${PORT}`);
+  console.log(`Health check: http://localhost:${PORT}/health`);
+});;
