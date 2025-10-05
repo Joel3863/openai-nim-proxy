@@ -21,7 +21,7 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', service: 'OpenAI to NVIDIA NIM Proxy' });
 });
 
-app.get('/v1/models' || '/models', (req, res) => {
+app.get(['/v1/models', '/models'], (req, res) => {
   const models = Object.keys(MODEL_MAPPING).map(model => ({
     id: model,
     object: 'model',
