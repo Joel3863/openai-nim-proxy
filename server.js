@@ -35,7 +35,7 @@ app.get(['/v1/models', '/models'], (req, res) => {
   });
 });
 
-app.post('/v1/chat/completions', async (req, res) => {
+app.post(['/v1/chat/completions', '/chat/completions'], async (req, res) => {
   try {
     const { model, messages, temperature, max_tokens, stream } = req.body;
     
